@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+}
+:root{
+   --height:100% ;
+   --width: 100vw; 
+   --primaryColor:#9EBB1F;
+   --textSize:12px;
+}
+
+body{
+    height: var(--height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    background-color: antiquewhite;
+  
+    
+}
+.wrapper{
+    max-width: 600px;
+    width: calc(var(--width)  - var(--width)*.03);
+    height: calc(var(--height)  - var(--height)*.02);
+    background-color: aliceblue;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 100%;
+}
+.left,
+.right{
+height: 100%;
+
+}
+.left{
+    width: 40%;
+    border-right: dashed 2px yellow;
+    margin: 5px 0px; 
+    height: 200vh;
+}
+.left-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* background: red; */
+ 
+
+}
+.contact{
+
+    margin-top: auto;
+    width: 100%;
+}
+
+.contact h6 {
+    padding:2px;
+}
+.contact h6 a{
+    text-decoration: none;
+    font-size: var(--textSize)*.9;
+    color: black;
+    cursor: pointer;
+
+
+
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+}
+.item div p{
+    font-size: 12px;
+}
+
+.skills p{
+    margin: 3px 0px;
+}
+.rounded-dot{
+    height: 10px;
+    width: 10px;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    text-align: left;
+    justify-self: flex-start
+
+}
+
+.smaller-dot{
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    text-align: left;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+.smaller-dot::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    height: 5px ;
+    width: 5px;
+    align-self: center;
+    margin: auto o;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+}
+.right{
+    padding: 15px;
+    width: 100%;
+}
+.right p{
+    /* line-height: 32px; */
+    font-size: 1.6em;
+}
+.right p span{
+    color: black;
+    font-weight: 800;
+}
+.right .role{
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: .6em;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+}
+/* profile */
+h3,
+h4{
+    color: var(--primaryColor);
+    margin: 4px;
+    margin-left: 0;
+}
+.profile p{
+    text-align: justify;
+    font-size: var(--textSize);
+    line-height: calc( var(--textSize)*1.4);
+}
+/* education */
+.education-container,
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto ;
+    padding: 5px;
+    grid-gap: 20px;
+}
+ul{
+    list-style-type:disc;
+    width: 100%;
+    text-align: justify;
+}
+.projects-right p{
+    font-size: var(--textSize)*2;
+    text-align: justify;
+}
+.projects-right .features{
+    margin: 5px 0px;
+}
