@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');*,
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300&display=swap');*,
 *::after,
 *::before{
     margin: 0;
@@ -21,35 +21,37 @@ body{
     align-items: center;
     flex-direction: column;
     flex: 1;
-    background-color: black;
     padding: 30px 0;
+    border: 2px ;
     font-family: 'Open Sans', sans-serif;
+    
 
     
 }
 .wrapper{
     max-width: 600px;
     width: calc(var(--width)  - var(--width)*.02);
-    height: calc(var(--height)  - var(--height)*.02);
+    /* height: calc(var(--height)  - var(--height)*.02); */
     background-color: #FFFFFF;
     border: 2px solid white;
     border-radius: 5px;
     display: flex;
     flex-wrap: nowrap;
     max-height: 100%;
+    box-shadow: 2px 2px  4px 4px darkgray;
     
 }
 .left,
 .right{
-height: 100%;
+    height: 100%;
 
 }
 
 
 h5{
-font-size:var(--textSize)*.3 !important;
+    font-size:var(--textSize)*.3 !important;
 
-text-align: left;
+    text-align: left;
 
 }
 
@@ -60,9 +62,11 @@ h6{
 }
 .left{
     width: 40%;
-    border-right: dashed 2px var(--secondaryColor);
+  
     margin: 5px 0px; 
-    height: 200vh;
+    /* height: 300vh; */
+    height: 100%;
+    /* max-height: 100%; */
 }
 .left-container{
     padding: 10px;
@@ -137,6 +141,7 @@ h6{
 .right{
     padding: 15px;
     width: 100%;
+    border-left: dashed 2px var(--secondaryColor);
 }
 .right p{
     /* line-height: 32px; */
@@ -198,4 +203,44 @@ ul{
 }
 .contact h6 a, .contact h6{
     color: rgb(81, 81, 81);
+}
+
+@media(max-width:450px){
+    :root{
+        --textSize: 11px
+    }
+    body{
+    width: 100vw;
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    }
+    .wrapper{
+        width:100%
+    }
+    h4{
+        font-size:12px
+    }
+    .left-container{
+        padding: 1.2%;
+    }
+    .contact h6 a,
+    .contact h6{
+    word-break: break-all;   
+    }
+
+    .right{
+    padding: 2px;
+    width: 60%;   
+    }
+    .right p:first-child{
+        font-size: var(--textSize)*3
+    
+    }
+    .education-container, .projects-container {
+        gap:5px
+    }
+    ul{
+        width: 95%;
+    }
 }
