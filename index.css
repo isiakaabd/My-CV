@@ -1,14 +1,17 @@
-*,
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');*,
 *::after,
 *::before{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 :root{
    --height:100% ;
    --width: 100vw; 
    --primaryColor:#9EBB1F;
    --textSize:12px;
+   --secondaryColor:#DAD8D8;
+   --headings:#2D210A
 }
 
 body{
@@ -18,29 +21,46 @@ body{
     align-items: center;
     flex-direction: column;
     flex: 1;
-    background-color: antiquewhite;
-  
+    background-color: black;
+    padding: 30px 0;
+    font-family: 'Open Sans', sans-serif;
+
     
 }
 .wrapper{
     max-width: 600px;
-    width: calc(var(--width)  - var(--width)*.03);
+    width: calc(var(--width)  - var(--width)*.02);
     height: calc(var(--height)  - var(--height)*.02);
-    background-color: aliceblue;
+    background-color: #FFFFFF;
     border: 2px solid white;
     border-radius: 5px;
     display: flex;
     flex-wrap: nowrap;
     max-height: 100%;
+    
 }
 .left,
 .right{
 height: 100%;
 
 }
+
+
+h5{
+font-size:var(--textSize)*.3 !important;
+
+text-align: left;
+
+}
+
+
+h6{
+    line-height: 1.5em;
+    padding: 2px;
+}
 .left{
     width: 40%;
-    border-right: dashed 2px yellow;
+    border-right: dashed 2px var(--secondaryColor);
     margin: 5px 0px; 
     height: 200vh;
 }
@@ -49,9 +69,7 @@ height: 100%;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* background: red; */
  
-
 }
 .contact{
 
@@ -65,7 +83,7 @@ height: 100%;
 .contact h6 a{
     text-decoration: none;
     font-size: var(--textSize)*.9;
-    color: black;
+    color: rgb(81, 81, 81);
     cursor: pointer;
 
 
@@ -126,15 +144,17 @@ height: 100%;
 }
 .right p span{
     color: black;
-    font-weight: 800;
+    font-weight: 900;
 }
 .right .role{
     text-transform: uppercase;
     font-style: italic;
-    font-size: .6em;
+    font-size: var(--textSize);
     line-height: 2;
     padding: 0;
     margin: 0;
+    word-spacing: 5px;
+    letter-spacing:2px
 }
 /* profile */
 h3,
@@ -145,8 +165,8 @@ h4{
 }
 .profile p{
     text-align: justify;
-    font-size: var(--textSize);
-    line-height: calc( var(--textSize)*1.4);
+    font-size: var(--textSize)*2;
+    line-height: calc( var(--textSize)*1.5);
 }
 /* education */
 .education-container,
@@ -158,7 +178,7 @@ h4{
     grid-gap: 20px;
 }
 ul{
-    list-style-type:disc;
+    list-style-type:"- ";
     width: 100%;
     text-align: justify;
 }
@@ -168,4 +188,14 @@ ul{
 }
 .projects-right .features{
     margin: 5px 0px;
+}
+
+.contact h6{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   
+}
+.contact h6 a, .contact h6{
+    color: rgb(81, 81, 81);
 }
